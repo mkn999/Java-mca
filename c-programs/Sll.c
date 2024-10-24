@@ -25,7 +25,7 @@ int main()
     //input inserted data
     } 
     
-   //insertion at begining
+  /*  //insertion at begining
     newn = (struct node *)malloc(sizeof(struct node));
     printf("Enter an element to insert at begining:");
     scanf("%d",&newn->data); 
@@ -43,8 +43,8 @@ int main()
     }
     temp->next = newno;
     newno->next = NULL;
-    
-    //inserting after a postion
+    */
+    /*inserting after a postion
     printf("INSERTION AFTER A LOCATION");
     int pos;
     p = head;
@@ -59,7 +59,6 @@ int main()
     mid->next=p->next;
     p->next=mid;
     
-
     //delete at begining
     printf("\n DELETION AT BEGINING \n");
     temp=head;
@@ -75,6 +74,22 @@ int main()
     }
     free(temp);
     prev->next=NULL;
+    */
+    
+    //delete after a given position
+    printf("INSERTION AFTER A LOCATION");
+    int pos;
+    p = head;
+    //mid = (struct node *)malloc(sizeof(struct node));
+    printf("Enter the postion:");
+    scanf("%d",&pos);
+    for(int i=0;i<pos;i++){
+        prev = p;
+        p=p->next;
+    }
+    prev->next=p->next;
+    free(p);
+    
     
     //to print data
     temp = head;
