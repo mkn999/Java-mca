@@ -1,0 +1,61 @@
+import java.awt.event.*;
+import javax.swing.*;
+//basic java swing program
+public class JavaSwingProgram {
+    public static void main(String[] args){
+        JFrame frame = new JFrame("Detail Form");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        //name
+        JLabel namet = new JLabel("Enter your name:");
+        namet.setBounds(100, 100, 110, 20);
+        JTextField namearea = new JTextField();
+        namearea.setBounds(230, 100, 110, 20);
+        frame.add(namearea);
+        frame.add(namet);
+        //age 
+        JLabel aget = new JLabel("Enter your age:");
+        aget.setBounds(100, 150, 110, 20);
+        JTextField agearea = new JTextField();
+        agearea.setBounds(230, 150, 110, 20);
+        frame.add(aget);
+        frame.add(agearea);
+       /*  //Phone Number //lazy to add these -_-
+        JLabel phonent = new JLabel("Enter your phone:");
+        JTextField phonearea = new JTextField();
+        //address
+        JLabel addresst = new JLabel("Enter your address:");
+        JTextField addressarea = new JTextField();
+        //salary
+        JLabel salaryt = new JLabel("Enter your salary:");
+        JTextField salaryarea = new JTextField();
+        */
+        //button
+        JButton displayButton = new JButton("Enter");
+        displayButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                String name = namearea.getText(); 
+                int age = Integer.parseInt(agearea.getText());
+                String info = "Name is : "+name+"\n  Age is :"+age+"\n";
+                JOptionPane.showMessageDialog(null,info, "Message Title", JOptionPane.INFORMATION_MESSAGE);
+               /*  JFrame display2 = new JFrame("Details");
+                display2.setSize(300,300);
+                display2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                JLabel displayName = new JLabel("<html> Name: "+name+"<br> Age: "+age+"<html>");
+                displayName.setBounds(10,10,150,30);
+                display2.add(displayName);
+                display2.setLayout(null);
+                display2.setVisible(true); */
+            }
+        });
+
+    
+
+
+        displayButton.setBounds(200,200,100,35);
+        frame.add(displayButton);
+        frame.setLayout(null);
+        frame.setSize(500,400);
+        frame.setVisible(true);
+    }
+}
