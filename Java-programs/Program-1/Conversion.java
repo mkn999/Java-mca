@@ -37,7 +37,7 @@ public static void decToOct(int n){
 }
 public static void decToHex(int n){
     if (n>0){
-        decToOct(n/16);
+        decToHex(n/16);
         display(n%16);
     }   
 }
