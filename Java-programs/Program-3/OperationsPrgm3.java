@@ -3,7 +3,7 @@ import java.util.*;
 public class OperationsPrgm3 {
     public static void main (String[]args){
         Scanner scanner = new Scanner(System.in);
-        System.err.println("1.TreeSet 2.Stack");
+        System.out.println("1.TreeSet 2.Stack");
         int choice = scanner.nextInt(); 
         switch (choice) {
             case 1:
